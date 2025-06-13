@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/UTD-CVMC-Lab/House Rent (Linear Regression)/housing_train.csv')
+df = pd.read_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/housing_train.csv')
 
 x = df['sqfeet']
 x = x.astype(float)
@@ -13,7 +13,7 @@ for i in range (x.size):
     x[i] = x[i]/x.max()
     y[i] = y[i]/y.max()
 
-x.to_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/UTD-CVMC-Lab/House Rent (Linear Regression)/sqft.csv')
-y.to_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/UTD-CVMC-Lab/House Rent (Linear Regression)/price.csv')
+x.to_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/sqft.csv')
+y.to_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/price.csv')
 
 print('finished')
