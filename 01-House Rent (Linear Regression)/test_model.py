@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-x = pd.read_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/sqft.csv')
-y = pd.read_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/price.csv')
+x = pd.read_csv('01-House Rent (Linear Regression)/sqft.csv')
+y = pd.read_csv('01-House Rent (Linear Regression)/price.csv')
 x = x['sqfeet']
 y = y['price']
 training_size = int(0.8*x.size)
@@ -11,10 +11,10 @@ training_size = int(0.8*x.size)
 # parameters
 a = 0
 b = 0
-with open('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/parameter_weights.txt') as f:
+with open('01-House Rent (Linear Regression)/parameter_weights.txt') as f:
     f.readline() # skips the epoch line
 
-    a = float(f.readline().strip('a: ')) # grabs value associated with a 
+    a = float(f.readline().strip('a: '))  # grabs value associated with a 
     b = float(f.readline().strip('b: ')) # grabs value associated with b
 
 # test model

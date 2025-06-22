@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-x = pd.read_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/sqft.csv')
-y = pd.read_csv('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/price.csv')
+x = pd.read_csv('01-House Rent (Linear Regression)/sqft.csv')
+y = pd.read_csv('01-House Rent (Linear Regression)/price.csv')
 x = x['sqfeet']
 y = y['price']
 training_size = int(0.8*x.size)
@@ -48,5 +48,5 @@ plt.plot(x[training_size+1:], ((a*x[training_size+1:])+b), 'r-')
 plt.show()
 
 # save values into a .txt file
-file = open('/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/House Rent (Linear Regression)/parameter_weights.txt', 'w')
+file = open('01-House Rent (Linear Regression)/parameter_weights.txt', 'w')
 file.write(f'epochs: {epochs} \na: {a} \nb: {b}')
