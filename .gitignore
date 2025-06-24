@@ -1,3 +1,10 @@
 conda/
 *.csv
 .DS_Store
+01-House Rent (Linear Regression)/arg_parse.py
+03-CIFAR 10 (Convolutional Neural Network)\cifar-10-batches-py
+
+*.tar
+*.gz
+*.tar.gz
+
