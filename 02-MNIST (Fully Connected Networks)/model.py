@@ -138,7 +138,7 @@ class FNN():
             y_true = np.array(y_true)
             y_true = y_true.reshape((10,1))
 
-            x_o,ReLU_x_h,x_h = self.forward(x_in) # if i dont include non-needed variables, code breaks
+            x_o,_,_ = self.forward(x_in) # if i dont include non-needed variables, code breaks
             softmax_logits = self.softmax(x_o)
             loss += self.CELoss(softmax_logits,y_true)
         return loss
