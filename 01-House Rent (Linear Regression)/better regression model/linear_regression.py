@@ -6,7 +6,7 @@ def parser():
 
     args_reader = argparse.ArgumentParser(description="Script to train a linear regression model with two parameteres on house rent datasest.")
 
-    args_reader.add_argument('--csv_file_path', type=str, default='/Users/dylanjoseph/Library/CloudStorage/OneDrive-Personal/Code/CVMC Lab Work/01-House Rent (Linear Regression)/housing_train.csv', help = 'Path to the csv file containing house rent data')
+    args_reader.add_argument('--csv_file_path', type=str, default='housing_train.csv', help = 'Path to the csv file containing house rent data')
     
     # initialize hyper-parameters
     args_reader.add_argument('--lr', type=float, default=1e-2, help='learning rate for training the linear regression model')
@@ -151,7 +151,7 @@ for epoch in range(args.epochs):
     
     a -= args.lr*(grad_a)
     b -= args.lr*(grad_b)
-
+    
     
 a_test = a_lst[min_val_loss_index]
 b_test = b_lst[min_val_loss_index]
