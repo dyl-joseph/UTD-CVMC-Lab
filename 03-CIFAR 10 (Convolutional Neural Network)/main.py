@@ -22,7 +22,8 @@ train_data = torchvision.datasets.CIFAR10(root="03-CIFAR 10 (Convolutional Neura
 train, val = torch.utils.data.random_split(train_data, [45000, 5000])
 test = torchvision.datasets.CIFAR10(root="03-CIFAR 10 (Convolutional Neural Network)", train=False, transform=transform, download=True)
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("mps")
 
 
 #TODO: write a custom dataloader
